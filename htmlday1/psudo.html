@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>psudo classes and elements</title>
+    <style>input[type="number"]:out-of-range{border:20px solid red;}
+        input[type="number"]:in-range{border:20px solid green;}
+        P::first-line{text-decoration-line: underline;}
+        p::first-letter{font-size: 10px;
+        color: red;}
+        p::after{
+            content: "KLU";
+        }
+        p::before{
+            content: "End";
+        }
+        p::selection{
+            background-color: yellow;
+        }
+        ul li::marker{
+            content: "😊";
+        }
+
+    </style>
+</head>
+<body>
+    <input type="number" placeholder="enter age" min="0" max="18" style="width: 500px;">
+    <input type="email" placeholder="email address">
+    <br><br>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Temporibus, aspernatur! Consequuntur cumque delectus facere, 
+        dolor obcaecati minus magnam? Veritatis iusto nesciunt maiores 
+        ab voluptatum fugiat illo! Ab, dolores repudiandae ut architecto sunt veritatis dicta accusantium 
+        dolor numquam provident nisi rem cum magni deleniti molestiae officiis quisquam ipsum laudantium porro error?
+    </p>
+<ul>
+<li>excelr</li>
+<li>devops1</li>
+<li>devops</li>
+
+</ul>
+<ul class="demo">
+<li>csit</li>
+<li>klu</li>
+</ul>
+
+</body>
+</html>
