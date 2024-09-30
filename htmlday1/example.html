@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Redeclaring a Variable Using var</h2>
+
+<p id="demo"></p>
+
+<script>
+    //Example 1
+var  x = 10;
+// Here x is 10
+
+{  
+var x = 2;
+// Here x is 2
+}
+
+// Here x is 2
+document.getElementById("demo").innerHTML = x;
+//ex:2
+let arr1 = [10,20,30,40,50];
+document.write(arr1[0],`<br>`);
+document.write(arr1[1],`<br>`);
+document.write(arr1[2],`<br>`);
+document.write(arr1[3],`<br>`);
+document.write(arr1[4],`<br>`);
+document.write(arr1[5],`<br>`); 
+//undefined
+document.write(arr1[1],`<br>`); 
+//undefined
+//ex:3
+let arr2 =
+[`HTML`,`CSS`,`JAVASCRIPT`,`React`,`Node`]
+;
+document.write(arr2[0],`<br>`);
+document.write(arr2[1],`<br>`);
+document.write(arr2[2],`<br>`);
+document.write(arr2[3],`<br>`);
+document.write(arr2[4],`<br>`);
+//ex:4
+let arr3 = [10,20,30,40,50];
+document.write(arr3.at(0),arr3.at(-5), `<br>`);
+document.write(arr3.at(1),arr3.at(-4), `<br>`);
+document.write(arr3.at(2),arr3.at(-3), `<br>`);
+document.write(arr3.at(3),arr3.at(-2), `<br>`);
+document.write(arr3.at(4),arr3.at(-1), `<br>`);
+//ex:5
+let arr4 = [10,20,30,40,50];
+let new_arr = arr4.map((element,index)=>{
+return element*100;
+});
+console.log(new_arr);
+//ex:6
+let arr6 = [10,20,30,40,50];
+let res1 = 
+arr6.filter((element,index)=>{
+return element>=30;
+});
+console.log(res1);
+//ex:7
+let arr8 = [10,20,30,40,50];
+let new_arr1 = 
+arr8.map((element,index)=>{
+return element*10;
+}).filter((element,index)=>{
+return element>=400;
+});
+console.log(new_arr1);
+//ex:8
+let arr9 = [10,20,30,40,50];
+let res3 = 
+arr9.reduce((firstElement,nextElement)=>{
+return firstElement+nextElement;
+});
+document.write(res3);
+//Ex:9
+let arr10 = [1,2,3,4,5];
+let res4 = 
+arr10.reduce((firstElement,nextElement)=>{
+return firstElement+nextElement;
+},85);
+document.write(res4);
+//Ex:10
+let arr11 = [10,20,30,40,50];
+let res5 = arr11.map((element,index)=>{
+return element*100;
+}).filter((element,index)=>{
+return element<=3000;
+}).reduce((firstElement,nextElement)=>{
+return firstElement+nextElement;
+},4000);
+document.write(res5); 
+//ex:11
+let arr12 = [10,20,30,40,50];
+document.write(arr12.includes(30)); 
+//ex:12
+let res6 = arr12.find((element,index)=>{
+return element == 30;
+});
+document.write(res6); 
+//ex:13
+let arr13 = [10,20,30,40,50];
+let res7 = arr13.every((element,index)=>{
+return element<100; 
+});
+document.write(res7); //true
+let res8 = arr13.every((element,index)=>{
+return element<50; 
+});
+document.write(res8); 
+//ex:14
+let arr18 = [10,20,30,40,50,60,70,80,90,100];
+//delete 40,50,60
+arr18.splice(3,3);
+console.log(arr18); //[10, 20, 30, 70, 80, 90,100]
+//delete 10
+arr18.splice(0,1);
+console.log(arr18); //[20, 30, 70, 80, 90,100]
+//delete 100
+arr18.splice(5,1);
+console.log(arr18); //[20, 30, 70, 80, 90]
+//add 40, 50, 60
+arr18.splice(2,0,40,50,60);
+console.log(arr18);//[20, 30, 40, 50, 60, 70, 80, 90]
+//delete 20 and add 10,20
+arr18.splice(0,1,10,20);
+console.log(arr18);//[10, 20, 30, 40, 50, 60, 70, 80, 90]
+//add 100 after 90
+arr18.splice(9,0,100);
+console.log(arr18); //[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+//ex:15
+let arr27 = 
+[10,20,30,40,50,60,70,80,90,100];
+let x1 = arr27.findIndex((element,index)=>{
+return element == 50;
+});
+document.write(x1); //4
+let y = arr2.findIndex((element,index)=>{
+return element == 1000;
+});
+document.write(y); 
+//Ex:16
+let arr33 = [10,20,30,40,50];
+let p = 
+arr33.some((element,index)=>{
+return element<=10;
+});
+document.write(p); // true
+let q = arr3.some((element,index)=>{
+return element<10;
+});
+document.write(q); 
+//Ex:17
+let arr412 = [10,20,30,40,50];
+let new_arr12 = arr412.reverse();
+console.log(new_arr12);
+let str = "hello"; 
+let reversedStr = str.split('').reverse().join(''); 
+console.log(reversedStr); 
+//ex:18
+let fruits = ['apple', 'banana', 'cherry']; 
+let result = fruits.toString(); 
+console.log(result); 
+// Output: "apple,banana,cherry"
+//ex:19
+let str12 = "hello";
+let arr = Array.from(str12);
+console.log(arr); // Output: ['h', 'e', 'l', 'l', 'o']
+console.log(
+Array.from("Hello").reverse().toString().
+replaceAll(",","")
+); 
+//ex:20
+console.log(
+Array.from("CSS").reverse().join("")
+); 
+let characters = ['a', 'b', 'c']; 
+let result2 = characters.join('');
+console.log(result2); 
+//ex:21
+let arr5 = 
+[10,20,30,40,50,60,70,80,90,100];
+console.log(arr5.slice(3,6)); 
+//[40, 50, 60]
+console.log(arr5.slice(0,1)); 
+//[10]
+console.log(arr5.slice(8)); 
+//[90, 100]
+//ex:22
+let arr61 = [[[[[[[[1,2,3]]]]]]]];
+let r = arr61.flat(Infinity);
+console.log(r); //[1, 2, 3]
+//ex:23
+let arr7 = [1,2,3];
+let s = ["one","two","three"];
+let new_arr2 = 
+arr7.flatMap((element,index)=>{
+return [element,s[index]];
+});
+console.log(new_arr2); 
+//[1, 'one', 2, 'two', 3, 'three']
+//ex:24
+var arr101 = [1000,2000,3000,4000,5000];
+arr101.forEach((element,index)=>{
+document.write(element,`.......`,index
+,`<br>`);
+});
+//ex:25
+var arr212 = 
+[`React`,`Node`,`HTML`,`CSS`,`JavaScri
+pt`];
+for(var x of arr212) {
+document.write(x, `<br>`);
+}
+//ex:26
+var arr121 = [1000,2000,3000,4000,5000];
+arr121.forEach((element,index)=>{
+document.write(element,`.......`,index
+,`<br>`);
+});
+var arr211 = 
+[`React`,`Node`,`HTML`,`CSS`,`JavaScri
+pt`];
+for(var x of arr211) {
+document.write(x, `<br>`);
+}
+//ex:27
+var obj3 = {
+"key1" : "Frontend",
+"key2" : "Backend",
+"key3" : "Database"
+};
+for(var x in obj3) {
+document.write(obj3[x]);
+}
+let arr81 = [10,20,30,10,20,30];
+arr81.forEach((element,index)=>{
+console.log(arr81.indexOf(element));
+});
+let arr91 = [10,20,30,10,20,30];
+let new_arr3 = 
+arr91.filter((element,index)=>{
+return arr91.indexOf(element) == index;
+});
+console.log(new_arr3); //[10, 20, 30]
+let arr1011 = [10,10,10,10,10];
+console.log(
+arr1011.fill(20,1).fill(30,2,3).fill(40,
+3,4).fill(50,4)
+); 
+let arr110 = [10,20,30,40,50];
+console.log(arr110.length); //5
+let arr120 = [];
+console.log(arr120.length); //0
+let arr130 = [];
+arr130[100] = 1000;
+console.log(arr130.length);
+let arr14 = [10,20,30,40,50];
+delete arr14[0];
+console.log(arr14.length);
+let arr154 = [20,30,40];
+arr154.push(50);
+console.log(arr154)
+let arr150 = [20,30,40,50];
+arr150.unshift(10);
+console.log(arr150);
+let arr152 = [10, 20, 30, 40, 50];
+arr152.pop();
+console.log(arr152);
+//[10, 20, 30, 40]
+let arr1511 = [10,20,30,40];
+arr1511.shift();
+console.log(arr1511);
+console.log(
+"ExcelR".padStart(10,"*") //****ExcelR
+);
+console.log(
+"ExcelR".padEnd(10,"*")
+);
+console.log(
+" ExcelR ".length
+); //8
+console.log(
+" ExcelR ".trimStart().length
+); //7
+console.log(
+"ExcelR".trimEnd().length
+);
+console.log(
+"ExcelR".trim().length 
+); 
+//ascending order
+let arr16 = [10,20,30,40,50];
+console.log(
+arr16.sort((num1,num2)=>{
+return num1-num2;//[10, 20, 30, 40, 50]
+ })
+);
+//descending order
+console.log(
+arr16.sort((num1,num2)=>{
+return num2-num1;//[50, 40, 30, 20, 10]
+})
+);
+let arr111 = ["ExcelR","to","Welcome"];
+let res = 
+arr111.reduceRight((firstElement,nextElement)=>{
+return firstElement+nextElement;
+});
+console.log(res); 
+let arr22 = [10,20,30,40,50,10,20,10];
+console.log(arr22.lastIndexOf(10)); 
+//7
+let arr31 = 
+[10,20,30,40,50,60,70,80,90,100];
+arr31.copyWithin(5);
+console.log(arr31); 
+//[10, 20, 30, 40, 50, 10, 20, 30, 40, 50]
+let arr41 =[10,20,30,40,50,60,70,80,90,100];
+arr41.copyWithin(2,5);
+console.log(arr41); //[10, 20, 60, 70, 80, 90, 100, 80, 90, 100]
+let arr51 = 
+[10,20,30,40,50,60,70,80,90,100];
+arr51.copyWithin(2,5,7);
+console.log(arr51); //[10, 20, 60, 70, 50, 60, 70, 80, 90, 100]
+let str4 = "ExcelR";
+console.log(str4.repeat(5)); 
+let str1 = "Welcome to ExcelR";
+console.log( str1.split(" ") 
+); 
+let str2 = "Welcome to ExcelR";
+console.log( str2.substring(0,7) 
+); //Welcome
+console.log( str2.substring(8,10) 
+); //to
+console.log( str2.substring(11) 
+);
+let str3 = "Welcome to ExcelR";
+console.log( str3.substr(0,7) 
+); //Welcome
+console.log( str3.substr(8,2) 
+); //to
+console.log( str3.substr(11) 
+); 
+const str5 = 'Hello, world!'; 
+const result1 = str5.replace('world', 'JavaScript'); 
+console.log(result1); 
+// Output: 'Hello, JavaScript!'
+</script>
+
+</body>
+</html>

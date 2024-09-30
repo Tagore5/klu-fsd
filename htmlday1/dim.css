@@ -1,0 +1,13 @@
+html{font-size: 16px;}
+.c1{font-size: 3rem;}
+.c2{font-size: 2rem;}
+.md{font-size: 2rem;}
+.c3{font-size: 3em;}
+.c4{font-size: 2em;}
+.per_cls{width: 200px;
+height:250px;
+border: 1px solid red;}
+.c5{width:70%;
+background-color: rgb(173, 255, 47);}
+.c6{width:vw;
+background-color: #220077;}
